@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Image</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+         @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+        *{
+            /*background: linear-gradient(240deg, rgba(255,255,255,1) 50%, rgba(0,255,235,1) 50%);*/
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("/static/pexels-lumn-167699.jpg");
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .container{
+            width: 100px;
+            height:100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15vh;
+            margin-left: 75vh;
+        }
+        
+        form{
+            background: black;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        form input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: rgb(255, 255, 255);
+            padding: 15px 70px;
+            border-radius: 1%;
+            font-weight: bolder;
+            border: 2px solid black;
+
+        }
+        form button{
+            background: rgb(46, 94, 122);
+            border: none;
+            color: white;
+            padding: 10px 50px;
+            outline: none;
+            letter-spacing: 1px;
+            cursor: pointer;
+            font-weight: bolder;
+            border: 2px solid black;
+            text-transform: uppercase;
+        }
+        .content{
+            background-color: #477bc0;
+            width: 50%;
+            opacity: 0.6;
+            text-align: center;
+            align-items: center;
+            margin-left: 25%;
+            margin-top: 150px;
+        }
+        .content h1{
+            text-transform: uppercase;
+            font-size: 45px;
+            align-items: center;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <h1>Text To Image Generation</h1>
+    </div>
+
+
+    <div class="container"> 
+    <form method="post" action="http://127.0.0.1:5000/generate">
+        <input type="text" placeholder="Enter text to generate..." name = 'text' required><br>
+        <button>Generate</button>
+    </form>
+    </div>
+</body>
+</html> 
